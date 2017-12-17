@@ -13,6 +13,7 @@ RUN apt-get install -y software-properties-common python-software-properties && 
       php-cli \
       php-fpm \
       libapache2-mod-php \
+      libapache2-mod-rpaf \
       php-gd \
       php-json \
       php-mbstring \
@@ -26,6 +27,6 @@ RUN apt-get install -y software-properties-common python-software-properties && 
 
 RUN rm -rf /var/lib/apt/lists/* && \
     a2dismod php7.1 mpm_prefork ssl && \
-    a2enmod actions alias proxy_fcgi mpm_event setenvif dav dav_fs
+    a2enmod actions alias proxy_fcgi mpm_event setenvif dav dav_fs rpaf
 
 CMD ["/bin/bash", "/start.sh"]
