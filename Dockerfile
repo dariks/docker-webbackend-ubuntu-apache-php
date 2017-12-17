@@ -11,6 +11,7 @@ RUN apt-get install -y software-properties-common python-software-properties && 
     apt-get install -y \
       php \
       php-cli \
+      php-fpm \
       libapache2-mod-php \
       php-gd \
       php-json \
