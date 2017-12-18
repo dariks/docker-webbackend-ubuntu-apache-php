@@ -31,4 +31,6 @@ RUN rm -rf /var/lib/apt/lists/* && \
     a2enmod actions alias proxy_fcgi mpm_event setenvif dav dav_fs rpaf && \
     a2enconf php7.1-fpm
 
+ADD start.sh /start.sh
+
 CMD ["/bin/bash", "/start.sh"]
