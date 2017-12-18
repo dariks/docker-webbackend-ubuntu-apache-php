@@ -23,7 +23,8 @@ RUN apt-get install -y software-properties-common python-software-properties && 
       php-xml \
       php-zip \
       php-soap && \
-    apt-get clean
+    apt-get clean && \
+    mkdir -p /run/php
 
 RUN rm -rf /var/lib/apt/lists/* && \
     a2dismod php7.1 mpm_prefork ssl && \
