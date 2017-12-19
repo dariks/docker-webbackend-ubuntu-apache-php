@@ -28,9 +28,10 @@ RUN apt-get install -y software-properties-common python-software-properties && 
 
 RUN rm -rf /var/lib/apt/lists/* && \
     a2dismod php7.1 mpm_prefork ssl && \
-    a2enmod actions alias proxy_fcgi mpm_event setenvif dav dav_fs rpaf && \
+    a2enmod actions alias proxy_fcgi mpm_event setenvif dav dav_fs rpaf rewrite && \
     a2enconf php7.1-fpm
 
+ADD ports.conf /etc/apache2/ports.conf
 ADD start.sh /start.sh
 
 CMD ["/bin/bash", "/start.sh"]
