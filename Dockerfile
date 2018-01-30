@@ -9,20 +9,21 @@ RUN apt-get install -y software-properties-common python-software-properties && 
     add-apt-repository ppa:ondrej/php && \
     apt-get update && \
     apt-get install -y \
-      php \
-      php-cli \
-      php-fpm \
+      php7.1 \
+      php7.1-cli \
+      php7.1-fpm \
       libapache2-mod-php \
       libapache2-mod-rpaf \
-      php-gd \
-      php-json \
-      php-mbstring \
-      php-mysql \
-      php-intl \
-      php-sqlite3 \
-      php-xml \
-      php-zip \
-      php-soap && \
+      php7.1-gd \
+      php7.1-json \
+      php7.1-mbstring \
+      php7.1-mysql \
+      php7.1-intl \
+      php7.1-sqlite3 \
+      php7.1-xml \
+      php7.1-zip \
+      php7.1-curl \
+      php7.1-soap && \
     apt-get clean && \
     mkdir -p /run/php
 
