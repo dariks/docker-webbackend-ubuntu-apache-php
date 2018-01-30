@@ -8,7 +8,7 @@ RUN apt-get install -y software-properties-common python-software-properties && 
     export LANG=C.UTF-8 && \
     add-apt-repository ppa:ondrej/php && \
     apt-get update && \
-    apt-mark hold php7.2* \
+    apt-mark hold php7.2* && \
     apt-get install -y \
       php7.1 \
       php7.1-cli \
