@@ -23,6 +23,8 @@ RUN apt-get install -y software-properties-common python-software-properties && 
       php7.1-xml \
       php7.1-zip \
       php7.1-curl \
+      php7.1-opcache \
+      php7.1-readline \
       php7.1-soap && \
     apt-get clean && \
     mkdir -p /run/php
