@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Start sendmail
+service sendmail start
+
 # Start PHP-FPM
 /usr/sbin/php-fpm7.1
 
