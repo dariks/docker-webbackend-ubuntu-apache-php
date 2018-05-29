@@ -50,5 +50,6 @@ RUN sed -i -e "s/^output_buffering\s*=\s*4096/output_buffering = 0/" /etc/php/7.
 RUN sed -i -e "s/^max_execution_time\s*=\s*30/max_execution_time = 5000/" /etc/php/7.1/fpm/php.ini
 RUN sed -i -e "s/^max_input_time\s*=\s*60/max_input_time = 2000/" /etc/php/7.1/fpm/php.ini
 RUN sed -i -e "s/^max_input_time\s*=\s*60/max_input_time = 2000/" /etc/php/7.1/fpm/php.ini
+RUN echo srv-06.server.rippen-ks.de > /etc/mail/local-host-names
 
 CMD ["/bin/bash", "/start.sh"]
